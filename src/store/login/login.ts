@@ -22,7 +22,7 @@ const loginModule: Module<ILoginState, IRootState> = {
     async accountLoginAction({ commit }, payload: IAccount) {
       //1.实现登录逻辑
       const LoginResult = await accountLoginRequest(payload)
-      const { id, token } = LoginResult.data
+      const { token } = LoginResult.data
       commit('changeToken', token)
     }
   }
