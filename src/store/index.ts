@@ -18,4 +18,9 @@ const store = createStore<IRootState>({
   }
 })
 
+//解决登录刷新 让vuex里面的数据长期保存
+export function setupStore() {
+  store.dispatch('login/LoadLocalLogin')
+}
+
 export default store

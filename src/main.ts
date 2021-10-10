@@ -9,6 +9,8 @@ import 'element-plus/dist/index.css'
 
 // import hyRequest from './service'
 
+import { setupStore } from '@/store'
+
 import router from './router'
 import store from './store'
 
@@ -16,6 +18,7 @@ const app = createApp(App)
 app.use(globalRegister)
 app.use(router)
 app.use(store)
+setupStore()
 // app.use(ElementPlus)
 app.mount('#app')
 
