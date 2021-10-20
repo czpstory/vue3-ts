@@ -6,6 +6,8 @@ import { IAccount } from '@/service/login/type'
 import LocalCache from '@/utils/cache'
 import router from '@/router'
 
+import { mapMenuRoutes } from '@/utils/map-menu'
+
 import {
   accountLoginRequest,
   RequestUserInfoById,
@@ -29,6 +31,13 @@ const loginModule: Module<ILoginState, IRootState> = {
     },
     changeUserMenu(state, userMenus: any[]) {
       state.userMenus = userMenus
+      //动态路由的添加
+      const routes = mapMenuRoutes(userMenus)
+      // console.log(routes)
+      routes.forEach((route) => {
+        router.addRoute('main', route)
+      })
+      // router.addRoute()
     }
   },
   getters: {},
