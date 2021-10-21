@@ -1,9 +1,13 @@
 import { App } from 'vue'
 import {
   ElAside,
+  ElAvatar,
   ElButton,
   ElCheckbox,
   ElContainer,
+  ElDropdown,
+  ElDropdownItem,
+  ElDropdownMenu,
   ElForm,
   ElFormItem,
   ElHeader,
@@ -32,7 +36,11 @@ const components = [
   ElMain,
   ElMenu,
   ElSubMenu,
-  ElMenuItem
+  ElMenuItem,
+  ElDropdown,
+  ElDropdownMenu,
+  ElDropdownItem,
+  ElAvatar
 ]
 
 export default function (app: App): void {
